@@ -76,7 +76,7 @@ async def connect_to_wss(socks5_proxy, user_id):
 
 async def main():
     #find user_id on the site in conlose localStorage.getItem('userId') (if you can't get it, write allow pasting)
-    _user_id = input('Please Enter your user ID: ')
+    _user_id = ('d9c5ff31-15e6-494a-b866-021fdc15061f')
     #put the proxy in a file in the format socks5://username:password@ip:port or socks5://ip:port
     r = requests.get("https://github.com/monosans/proxy-list/raw/main/proxies/http.txt", stream=True)
     if r.status_code == 200:
