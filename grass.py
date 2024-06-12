@@ -79,12 +79,12 @@ async def main():
     with open('data.txt', 'r') as file:
         _user_id = file.read().strip()
     #put the proxy in a file in the format socks5://username:password@ip:port or socks5://ip:port
-    r = requests.get("https://github.com/monosans/proxy-list/raw/main/proxies/http.txt", stream=True)
+    r = requests.get("https://github.com/hookzof/socks5_list/raw/master/proxy.txt", stream=True)
     if r.status_code == 200:
-        with open('http.txt', 'wb') as f:
+        with open('proxy.txt', 'wb') as f:
             for chunk in r:
                 f.write(chunk)
-        with open('http.txt', 'r') as file:
+        with open('proxy.txt', 'r') as file:
                 socks5_proxy_list = file.read().splitlines()
     
     tasks = [asyncio.ensure_future(connect_to_wss('http://'+i, _user_id)) for i in socks5_proxy_list]
