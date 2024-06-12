@@ -54,9 +54,9 @@ git clone https://github.com/Riokarbu/grass-mining
 cd grass-mining
 ```
 ```
-nano grass.py
+nano data.txt
 ```
-Search text input your userid with your user id
+paste your user id
 </br>
 
 how to find user id. **`go to grass dashboard>F12>Console> type allow pasting > type localStorage.getItem('userId')`**
