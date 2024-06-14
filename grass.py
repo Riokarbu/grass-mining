@@ -85,7 +85,7 @@ async def main():
             for chunk in r:
                 f.write(chunk)
         with open('http.txt', 'r') as file:
-                socks5_proxy_list = file.read().splitlines())
+                socks5_proxy_list = file.read().splitlines()
     
     tasks = [asyncio.ensure_future(connect_to_wss('http://'+i, _user_id)) for i in socks5_proxy_list]
     await asyncio.gather(*tasks)
